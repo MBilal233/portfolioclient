@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+@import "mixins";
+@import "variables";
+
+body {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+
+
+
+@import "navbar";
+@import "Home";
+@import "About";
+@import "Skills";
+@import "Projects";
+@import "imgdeteal";
+@import "contact";

@@ -1,0 +1,246 @@
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  position: absolute;
+  top: 0;
+  color: $Primary-Color;
+  z-index: 999999;
+  .humberSection {
+    display: none;
+  }
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: $Red-Color;
+    h3 {
+      font-size: 37px;
+      .port {
+        color: $Primary-Color;
+      }
+    }
+  }
+  .linkSection {
+    ul {
+      transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+      .fa-xmark {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font-size: 25px;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+      li {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 18px;
+        list-style: none;
+        .navlink {
+          text-decoration: none;
+          color: $Primary-Color;
+          font-family: "Poppins", sans-serif;
+          font-weight: 200;
+          transition: all 0.5s;
+          &:hover {
+            color: $Red-Color;
+          }
+        }
+        // .active{
+        //   color: red;
+        // }
+      }
+    }
+  }
+  a {
+    color: $Red-Color;
+    text-decoration: none;
+  }
+  .emailSection {
+    text-align: center;
+    .emailinkText {
+      color: $Primary-Color;
+    }
+  }
+
+  .iconsSection {
+    text-align: start;
+    margin: 10px 0;
+    // .fa-square-instagram,
+    .fa-facebook-f,
+    .fa-twitter,
+    .fa-globe {
+      margin: 0 10px;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+      z-index: 1;
+
+      &:hover {
+        color: white;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .navbar {
+    .logo {
+      h3 {
+        font-size: 30px;
+      }
+    }
+    .linkSection {
+      ul {
+        li {
+          margin: 0 20px;
+          font-size: 15px;
+        }
+      }
+    }
+    .emailSection {
+      font-size: 10px;
+      .emailinkText {
+        color: $Primary-Color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    .linkSection {
+      ul {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        transition: all 0.5s;
+        background-color: rgba(0, 0, 0, 1);
+        backdrop-filter: blur(15px);
+
+        @include displayFlex;
+        flex-direction: column;
+        .fa-xmark {
+          display: block;
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+          margin: 15px 0;
+          font-size: 15px;
+        }
+      }
+      .hide {
+        left: -100%;
+      }
+    }
+    .emailSection {
+      display: block;
+      margin-left: -57%;
+    }
+    .iconsSection {
+      text-align: start;
+      margin-left: 0 90%;
+      .fa-facebook-f,
+      .fa-twitter,
+      .fa-globe {
+        margin: 0 10px;
+        font-size: 20px;
+        position: relative;
+        left: -90%;
+      }
+    }
+
+    .humberSection {
+      display: block;
+      position: relative;
+      padding: 0;
+      @include displayFlex;
+      flex-direction: column;
+      transition: all 0.5s;
+      .line {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 25px;
+        transition: all 1s;
+        margin-top: 4px;
+      }
+      .line1{
+        width: 15px;
+        align-self: flex-start;
+        height: 2px;
+
+      }
+      .line2{
+        width: 20px;
+        height: 2px;
+
+
+      }
+      .line3{
+        width: 15px;
+        align-self: flex-end;
+        height: 2px;
+
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    .emailSection {
+      margin-left: -59%;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+
+    .iconsSection {
+      .fa-facebook-f,
+      .fa-twitter,
+      .fa-globe {
+        font-size: 13px;
+        left: -50px;
+      }
+    }
+    .logo {
+      font-size: 10px;
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .humberSection {
+      font-size: 13px;
+
+      .line1{
+        width: 13px;
+        height: 2px;
+
+      }
+      .line2{
+        width: 18px;
+        height: 2px;
+
+
+      }
+      .line3{
+        width: 13px;
+        align-self: flex-end;
+        height: 2px;
+
+
+      }
+    }
+  }
+}

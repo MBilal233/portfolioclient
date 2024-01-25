@@ -1,0 +1,62 @@
+#Contacts {
+    background-color: black;
+  .container {
+    .row {
+      background-color: black;
+      width: 100vw;
+      height: 100vh;
+      .contactheading {
+        h1 {
+          font-size: 50px;
+          color: red;
+        }
+      }
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .namesection,
+        .emailandphonesection {
+          input {
+            border: 1px solid red;
+            background-color: transparent;
+            color: white;
+            padding: 8px 0;
+            padding-right: 60px;
+            padding-left: 20px;
+            margin: 20px 10px;
+            &::placeholder {
+              color: white;
+            }
+            outline: 1px solid red;
+          }
+        }
+        .messagesection {
+            textarea{
+                padding: 8px 0;
+                outline: 1px solid red;
+                background-color: transparent;
+                border: 1px solid red;
+                color: white;
+                padding-left: 20px;
+                padding-right: 140px;
+                &::placeholder{
+                    color: white;
+                }
+            }
+        }
+        .submitesection{
+            input{
+                border: 1px solid red;
+                background-color: transparent;
+                padding: 8px 0;
+                padding-right: 40px;
+                padding-left: 20px;
+                color: white;
+            }
+        }
+      }
+    }
+  }
+}

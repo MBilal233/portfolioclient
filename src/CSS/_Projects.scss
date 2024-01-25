@@ -1,0 +1,58 @@
+.projectSection {
+  background-color: black;
+  padding: 40px 0;
+  .container {
+    .projectHeading {
+      font-size: 50px;
+      padding: 50px 0;
+      color: red;
+    }
+  }
+  .container {
+    position: relative;
+    .row {
+      .images {
+        padding: 0 10px;
+        .imgparent {
+          width: 100%;
+          height: 350px;
+          margin: 10px 0;
+          background-color: black;
+          position: relative;
+          &:hover {
+            .imgHover {
+              @include displayFlex;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 5%;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+          .imgHover {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            transition: all 0.5s;
+            display: none;
+            .detailBtn {
+              border: none;
+              padding: 8px 40px;
+              border-radius: 50px;
+              background-color: red;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

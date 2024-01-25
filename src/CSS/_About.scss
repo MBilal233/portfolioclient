@@ -1,0 +1,154 @@
+.aboutSection {
+  @include displayFlex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  margin: 0px 0 !important;
+  padding: 0 !important;
+  .container {
+    .row {
+      padding: 40px 0;
+      .team-section {
+
+        p {
+          line-height: 30px;
+        }
+        h1 {
+          color: red;
+        }
+        h5 {
+          padding: 10px 20px;
+          color: red;
+
+          font-family: "Oswald", sans-serif;
+        }
+        padding: 0 30px;
+        text-align: left;
+        .imgBorder {
+          border: none;
+          padding: 0;
+          overflow: hidden;
+          img {
+            width: 100%;
+            object-position: 50% 90%;
+            object-fit: cover;
+            
+            &:hover{
+              transform: scale(1.25,1.25);
+              transform-origin: center;
+              transition: all 20s;
+            }
+          }
+        }
+      }
+      .WorkSection {
+        .container-fluid {
+          .row {
+            .team-section {
+              border-right: 1px solid rgba(255, 255, 255, 0.1);
+              text-align: center;
+              padding: 0 30px;
+
+              h1,
+              h5 {
+                color: gray;
+              }
+            }
+            .team-section:nth-last-of-type(1) {
+              border-right: none;
+            }
+          }
+        }
+      }
+      .download {
+        text-align: center;
+        margin: 30px 0;
+        .downloadCV {
+          background-color: red;
+          border: none;
+          padding: 8px 40px;
+          border-radius: 50px;
+          font-size: 14px;
+          text-decoration: none;
+          color: white;
+          & {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutSection {
+    height: auto;
+    // background-color: aquamarine;
+    .container {
+      // background-color: chocolate;
+      .row {
+        .team-section {
+          text-align: start;
+          margin: 10px 0;
+
+          .iconsSection {
+            text-align: center;
+            h5 {
+              text-align: start;
+            }
+          }
+          .BioSection {
+            order: 1;
+          }
+          .imgSection {
+            order: 2;
+          }
+        }
+        .WorkSection {
+          .container-fluid {
+            .row {
+              .team-section {
+                padding: 0 30px;
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h5 {
+                  text-align: center;
+                  margin: 0 -50px;
+                  font-size: 16px;
+                  text-align: center;
+                }
+                h1 {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:576px) {
+  .aboutSection{
+    .container{
+      .row{
+        .WorkSection{
+          .container-fluid{
+            .row{
+              @include displayFlex;
+              .team-section{
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
